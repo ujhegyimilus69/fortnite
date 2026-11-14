@@ -30,17 +30,49 @@
 
         <main>
             <h2>Miért különleges...?</h2>
-            <figure>
-                <img src="fortniteujskin.jpeg" alt="a goat" width="600px">
-                <figcaption>Fortnite legkomolyabb arca</figcaption>
-            </figure>
+            <p>2017 nyarán jelent meg eleinte a Save the World játékmóddal, azonban pár hónapra rá Battle Royale része is lett, utóbbi örvend mai napig nagy népszerűségnek. 
+                Egyedülálló játékmenet, teljesen más a többi Battle Royale játékokhoz képest. Egyedi még a családias környezetében, hisz az emberekhez közelebb viszi a Halloweent, karácsonyt és olyan érzés mint ha az egész világgal ünnepelnéd ezeket az ünnepeket.
+                Rengeteg ember első koncertjét is adta, pl. Marshmello koncert vagy a népszerűbb Travis Scott koncert. Több millió ember élhette át egyszerre. 
+                Sokszor mondták már, hogy "Fortnite is fading away". But a fade awlays grows back.
+            </p>
+        <figure>
+            <figcaption>Fortnite legkomolyabb arcai</figcaption>
+            <div class="kepek-doboz">
+                <img src="fortniteujskin.jpeg" alt="a goat" width="300">
+                <img src="peely-fortnite.gif" alt="banan" width="300">
+                <img src="kriszhadvice.jpg" alt="papi" width="300">
+            </div>
+        </figure>
         </main>
 
         <footer>
-            <p>Elérhetőség..</p>
-            <p>Copyright..</p>
+            <p>Elérhetőség: epicgames@support.com</p>
+           <p>&copy; Ujhegyi Milán. All rights reserved.</p>
         </footer>
-    </div>
+    </div> 
+
+    <audio id="hatter-zene" src="zene.mp3" loop></audio>
     
+    <div class="zene-kontener">
+        <button id="zene-gomb">Fortnite Himnusz</button>
+    </div>
+
+    <script>
+        const gomb = document.getElementById('zene-gomb');
+        const zene = document.getElementById('hatter-zene');
+
+        gomb.addEventListener('click', function() {
+            if (zene.paused) {
+                zene.play();
+                gomb.textContent = 'Megállítás';
+                gomb.style.backgroundColor = '#d9534f'; 
+            } else {
+                zene.pause();
+                gomb.textContent = '🎵 Fortnite Zene Indítása 🎵';
+                gomb.style.backgroundColor = '#f0ad4e'; 
+            }
+        });
+    </script>
+
 </body>
 </html>
